@@ -1,5 +1,6 @@
 let img = document.querySelector('.photo');
 let nameDr = document.querySelector('.name');
+let number = document.querySelector('.number');
 let names = ['すずき', 'さとう', 'いと', 'たかなし', 'たなか', 'かと', 'いのうえ', 'さいと', 'あだち'];
 let wait = document.querySelector('.wait');
 let start = document.querySelector('.start');
@@ -24,12 +25,14 @@ timer = setInterval(()=>{
     
 }, 1000);
 document.addEventListener('DOMContentLoaded', ()=> {
+    number.innerHTML += Math.floor(Math.random()*1000);
     let rnd = Math.floor(Math.random()*9);
     img.style.cssText = `background-image: url("img/${rnd}.jpg");`;
     console.log(rnd)
     nameDr.innerHTML = names[rnd];
 })
 
-start.addEventListener('click', ()=>{
+start.addEventListener('click', (e)=>{
     clearInterval(timer);
+    e.target.style.cssText += 'background-color: #e3e3e3;'
 })
