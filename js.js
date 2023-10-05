@@ -25,7 +25,7 @@ timer = setInterval(()=>{
     
 }, 1000);
 document.addEventListener('DOMContentLoaded', ()=> {
-    number.innerHTML += Math.floor(Math.random()*1000);
+    number.innerHTML += `${Math.floor(Math.random()*900+100)}`;
     let rnd = Math.floor(Math.random()*9);
     img.style.cssText = `background-image: url("img/${rnd}.jpg");`;
     console.log(rnd)
