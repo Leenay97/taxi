@@ -8,7 +8,7 @@ let timer;
 let time = 0;
 let fulltime = 0;
 let priceCont = document.querySelector('.price');
-let price = 500;
+let price = 1000;
 timer = setInterval(()=>{
     time += 1;
     if (time == 60) {
